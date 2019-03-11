@@ -75,34 +75,7 @@ public class EditMarks extends AppCompatActivity {
         IndividualResult individualResult = new IndividualResult();
         individualResult.setDatadata(csvline);
         boolean exits =false;
-        if(file1.exists()) {
-            resultArrayList = ResultUtilites.loadDataFile(file1);
-            int aLsize = resultArrayList.size();
-
-            for (int i = 0; i < aLsize; i++) {
-                if (resultArrayList.get(i).oldRoll == roll) {
-                    if (!individualResult.nickName.equals("")) {
-                        resultArrayList.get(i).nickName = individualResult.nickName;
-                    }
-                    if (!bmrk.equals("")) {
-                        resultArrayList.get(i).marks[0] = individualResult.marks[0];
-                    }
-                    if (!emrk.equals("")) {
-                        resultArrayList.get(i).marks[1] = individualResult.marks[1];
-                    }
-                    if (!mmrk.equals("")) {
-                        resultArrayList.get(i).marks[2] = individualResult.marks[2];
-                    }
-                    resultArrayList.get(i).updateSum();
-                    exits = true;
-                    break;
-                }
-            }
-        }
-        if(!exits){
-            resultArrayList.add(individualResult);
-        }
-
+       
 
         try {
             PrintWriter printWriter = new PrintWriter(file1);
