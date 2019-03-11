@@ -1,18 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/welc_tv"
+        android:text="Welcome to RC"
+        android:textSize="24sp"/>
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Class:\n"
+        android:textSize="20sp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+
+        android:onClick="onClickClass1Result"
+        android:textSize="25sp"
+        android:text="Class One"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+
+        android:onClick="onClkClass2Result"
+        android:textSize="25sp"
+        android:text="Class Two"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+
+        android:onClick="onClkClass3Result"
+        android:textSize="25sp"
+        android:text="Class Three"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+
+        android:onClick="onClkClass4Result"
+        android:textSize="25sp"
+        android:text="Class Four"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+
+        android:onClick="onClkClass5Result"
+        android:textSize="25sp"
+        android:text="Class Five"/>
+
+
+</LinearLayout>
