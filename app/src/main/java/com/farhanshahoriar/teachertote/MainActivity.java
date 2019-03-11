@@ -52,10 +52,12 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onClkClass5Result(View view){
 
-        //Toast.makeText(this,"BtnOne",Toast.LENGTH_LONG).show();
         Intent intent = new Intent(this,DisplayResult.class);
         intent.putExtra("Class","5");
         startActivity(intent);
 
+    }
+    public void onClkexit(View view){
+        this.finishAffinity();
     }
 }
