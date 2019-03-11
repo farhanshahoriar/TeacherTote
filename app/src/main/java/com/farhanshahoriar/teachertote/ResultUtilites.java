@@ -1,4 +1,4 @@
-package com.farhanshahoriar.resultcalculator;
+package com.farhanshahoriar.teachertote;
 
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -1,4 +1,4 @@
-package com.farhanshahoriar.TeacherTote;
+package com.farhanshahoriar.teachertote;
 
 import android.content.Intent;
 import android.support.design.widget.TextInputLayout;

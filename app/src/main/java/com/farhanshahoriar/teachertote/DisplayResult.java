@@ -1,4 +1,4 @@
-package com.farhanshahoriar.resultcalculator;
+package com.farhanshahoriar.teachertote;
 
 import android.content.Intent;
 import android.content.res.AssetManager;
@@ -36,6 +36,7 @@ public class DisplayResult extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_result);
+
         keyText = (TextView) findViewById(R.id.search_key);
         fRecyclerView = (RecyclerView) findViewById(R.id.rv_food_menu);
 
@@ -60,6 +61,7 @@ public class DisplayResult extends AppCompatActivity {
 
 
         String fileName = "resultdata"+cls+".csv";
+
 
         file1 = new File(getApplicationContext().getFilesDir(),fileName);
         if(file1.exists()) {

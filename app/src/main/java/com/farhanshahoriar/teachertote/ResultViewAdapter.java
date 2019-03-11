@@ -1,4 +1,4 @@
-package com.farhanshahoriar.resultcalculator;
+package com.farhanshahoriar.teachertote;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
