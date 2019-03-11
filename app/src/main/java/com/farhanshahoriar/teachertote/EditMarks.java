@@ -68,15 +68,15 @@ public class EditMarks extends AppCompatActivity {
         if(inputstr.equals(""))inputstr="0";
         csvline+=inputstr+",";
 
-        //social science marks
+        /*social science marks
         ssmrk=inputstr = ssTextInputLayout.getEditText().getText().toString();
         if(inputstr.equals(""))inputstr="0";
-        csvline+=inputstr+",";
+        csvline+=inputstr+",";*/
 
-        //general science marks
+        /*general science marks
         gsmrk=inputstr = mathTextInputLayout.getEditText().getText().toString();
         if(inputstr.equals(""))inputstr="0";
-        csvline+=inputstr+",";
+        csvline+=inputstr+",";*/
 
         String fileName = "resultdata"+cls+".csv";
         File file1 = new File(getApplicationContext().getFilesDir(),fileName);
