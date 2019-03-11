@@ -68,6 +68,16 @@ public class EditMarks extends AppCompatActivity {
         if(inputstr.equals(""))inputstr="0";
         csvline+=inputstr+",";
 
+        //social science marks
+        ssmrk=inputstr = ssTextInputLayout.getEditText().getText().toString();
+        if(inputstr.equals(""))inputstr="0";
+        csvline+=inputstr+",";
+
+        //general science marks
+        gsmrk=inputstr = mathTextInputLayout.getEditText().getText().toString();
+        if(inputstr.equals(""))inputstr="0";
+        csvline+=inputstr+",";
+
         String fileName = "resultdata"+cls+".csv";
         File file1 = new File(getApplicationContext().getFilesDir(),fileName);
 
@@ -75,7 +85,34 @@ public class EditMarks extends AppCompatActivity {
         IndividualResult individualResult = new IndividualResult();
         individualResult.setDatadata(csvline);
         boolean exits =false;
-       
+        if(file1.exists()) {
+            resultArrayList = ResultUtilites.loadDataFile(file1);
+            int aLsize = resultArrayList.size();
+
+            for (int i = 0; i < aLsize; i++) {
+                if (resultArrayList.get(i).oldRoll == roll) {
+                    if (!individualResult.nickName.equals("")) {
+                        resultArrayList.get(i).nickName = individualResult.nickName;
+                    }
+                    if (!bmrk.equals("")) {
+                        resultArrayList.get(i).marks[0] = individualResult.marks[0];
+                    }
+                    if (!emrk.equals("")) {
+                        resultArrayList.get(i).marks[1] = individualResult.marks[1];
+                    }
+                    if (!mmrk.equals("")) {
+                        resultArrayList.get(i).marks[2] = individualResult.marks[2];
+                    }
+                    resultArrayList.get(i).updateSum();
+                    exits = true;
+                    break;
+                }
+            }
+        }
+        if(!exits){
+            resultArrayList.add(individualResult);
+        }
+
 
         try {
             PrintWriter printWriter = new PrintWriter(file1);
