@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
     public void onClickClass1Result(View view){
         Toast.makeText(this,"BtnOne",Toast.LENGTH_LONG).show();
         Intent intent = new Intent(this,DisplayResult.class);
-        intent.putExtra("Class","1");
 
+        intent.putExtra("Class","1");
         startActivity(intent);
 
     }
