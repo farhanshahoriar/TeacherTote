@@ -38,6 +38,8 @@ public class EditMarks extends AppCompatActivity {
             cls = intent.getStringExtra("Class");
         }
     }
+
+    //a function for adding marks
     public void addmarks(View view){
         int roll;
         String inputstr,csvline="";
@@ -51,14 +53,17 @@ public class EditMarks extends AppCompatActivity {
 
         csvline+=inputstr+",";
 
+        //bangla marks
         bmrk=inputstr = banglaTextInputLayout.getEditText().getText().toString();
         if(inputstr.equals(""))inputstr="0";
         csvline+=inputstr+",";
 
+        //english maks
         emrk=inputstr = englishTextInputLayout.getEditText().getText().toString();
         if(inputstr.equals(""))inputstr="0";
         csvline+=inputstr+",";
 
+        //math marks
         mmrk=inputstr = mathTextInputLayout.getEditText().getText().toString();
         if(inputstr.equals(""))inputstr="0";
         csvline+=inputstr+",";
@@ -97,6 +102,7 @@ public class EditMarks extends AppCompatActivity {
         if(!exits){
             resultArrayList.add(individualResult);
         }
+
 
         try {
             PrintWriter printWriter = new PrintWriter(file1);
