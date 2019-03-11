@@ -12,13 +12,23 @@
         android:layout_height="wrap_content"
         android:id="@+id/search_key"
         android:textSize="20sp" />
-
-    <Button
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Student"
-        android:onClick="onAddStudent"
-        />
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Student"
+            android:onClick="onAddStudent"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="backtoMain"
+            android:text="  Back  " />
+
+    </LinearLayout>
 
     <TextView
 

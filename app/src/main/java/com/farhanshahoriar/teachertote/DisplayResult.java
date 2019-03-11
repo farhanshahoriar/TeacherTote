@@ -85,4 +85,10 @@ public class DisplayResult extends AppCompatActivity {
         startActivity(intent);
         //Next part is not working.
     }
+    public void backtoMain(View view){
+        Intent intent = new Intent(this,MainActivity.class);
+        intent.putExtra("Class",cls);
+        startActivity(intent);
+        //Next part is not working.
+    }
 }
